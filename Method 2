@@ -1,0 +1,94 @@
+#include<iostream>
+#define MAX 1000
+using namespace std;
+
+ 
+void
+convert (char octalnum[])
+{
+  
+int i = 0;
+  
+ 
+cout << "Equivalent Binary Number: ";
+  
+while (octalnum[i])
+    
+    {
+      
+	//use switch case for multiple condition
+	switch (octalnum[i])
+	
+	{
+	
+case '0':
+	  
+printf ("000");
+	  break;
+	
+case '1':
+	  
+printf ("001");
+	  break;
+	
+case '2':
+	  
+printf ("010");
+	  break;
+	
+case '3':
+	  
+printf ("011");
+	  break;
+	
+case '4':
+	  
+printf ("100");
+	  break;
+	
+case '5':
+	  
+printf ("101");
+	  break;
+	
+case '6':
+	  
+printf ("110");
+	  break;
+	
+case '7':
+	  
+printf ("111");
+	  break;
+	  
+	    //for invalid case 
+	default:
+	  
+cout << "\n Invalid octal digit %c " << octalnum[i];
+	  
+return;
+	
+}
+      
+i++;
+    
+}
+  
+return;
+
+ 
+}
+
+
+int
+main () 
+{
+  
+char octalnum[MAX];
+  
+ 
+cout << "Insert an octal number: ";
+  
+cin >> octalnum;
+  convert (octalnum);
+}
